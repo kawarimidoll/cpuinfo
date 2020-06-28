@@ -12,20 +12,12 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="494" customClass="CpuinfoDelegate">
-            <connections>
-                <outlet property="mi_theme" destination="8Hg-ui-yi9" id="kNR-Dj-1g7"/>
-                <outlet property="mi_updateInterval" destination="545" id="9Jc-EE-aal"/>
-                <outlet property="statusMenu" destination="536" id="bbZ-yM-I5R"/>
-            </connections>
-        </customObject>
-        <customObject id="420" customClass="NSFontManager"/>
         <menu id="536">
             <items>
                 <menuItem title="ログイン時に開始" id="591">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="updateStartAtLogin:" target="494" id="q3H-UH-rvl"/>
+                        <action selector="updateStartAtLoginWithSender:" target="494" id="ppI-e6-sY0"/>
                         <binding destination="494" name="value" keyPath="startAtLogin" id="Hgl-Si-fjt"/>
                     </connections>
                 </menuItem>
@@ -37,43 +29,43 @@
                             <menuItem title="0.1秒" tag="100" id="547">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="uEg-yc-VmE"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="mBA-j1-jUD"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="0.2秒" tag="200" id="548">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="Mvr-gD-KND"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="hmw-cE-V5o"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="0.5秒" state="on" tag="500" id="549">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="BpK-Hd-eGF"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="LP4-iv-hol"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="1.0秒" tag="1000" id="550">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="ooz-71-4fJ"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="wb2-HT-ufv"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="5秒" tag="5000" id="fVQ-98-yFP">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="U5b-ky-IoS"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="z04-HR-dKW"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="10秒" tag="10000" id="cTE-TS-UtU">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="WaA-iA-aO4"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="FoQ-ez-C5Q"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="30秒" tag="30000" id="FuY-ZF-OAa">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="PA1-1U-fYi"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="yoV-XI-Sf4"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -86,7 +78,7 @@
                             <menuItem title="アイコン" state="on" tag="8" id="543">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateShowImage:" target="494" id="0Lf-Td-Xou"/>
+                                    <action selector="updateShowImageWithSender:" target="494" id="XrL-eP-gTg"/>
                                     <binding destination="494" name="value" keyPath="showImage" id="mSj-Sh-868"/>
                                     <binding destination="494" name="enabled" keyPath="showText" id="vQa-CT-BnO"/>
                                 </connections>
@@ -94,7 +86,7 @@
                             <menuItem title="テキスト" id="604">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateShowText:" target="494" id="Up1-dB-sw6"/>
+                                    <action selector="updateShowTextWithSender:" target="494" id="ypR-f9-M9r"/>
                                     <binding destination="494" name="enabled" keyPath="showImage" id="4ye-h5-CGF"/>
                                     <binding destination="494" name="value" keyPath="showText" id="5Go-r5-Mo7"/>
                                 </connections>
@@ -109,13 +101,13 @@
                             <menuItem title="Default" id="ULJ-2z-yDM">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateTheme:" target="494" id="KvF-nA-xDU"/>
+                                    <action selector="updateThemeWithSender:" target="494" id="c6a-7H-n8Q"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="B/W" id="d0V-CP-t4L">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateTheme:" target="494" id="gKJ-pj-8vJ"/>
+                                    <action selector="updateThemeWithSender:" target="494" id="Ic5-5t-6RZ"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -124,7 +116,6 @@
                 <menuItem title="コアを個別に表示" id="sfM-zJ-Hl0">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="updateCoresIndividually:" target="494" id="NUp-I3-HNx"/>
                         <binding destination="494" name="value" keyPath="showCoresIndividually" id="rfZ-Ur-lGp"/>
                     </connections>
                 </menuItem>
@@ -132,7 +123,7 @@
                 <menuItem title="アクティビティモニタを開く" id="602">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="launchActivityMonitor:" target="494" id="m9A-sp-4rT"/>
+                        <action selector="launchActivityMonitorWithSender:" target="494" id="yeG-bO-RKD"/>
                     </connections>
                 </menuItem>
                 <menuItem title="終了" id="539">
@@ -147,6 +138,14 @@
             </connections>
             <point key="canvasLocation" x="142" y="152"/>
         </menu>
+        <customObject id="494" customClass="CpuinfoDelegate">
+            <connections>
+                <outlet property="mi_theme" destination="8Hg-ui-yi9" id="kNR-Dj-1g7"/>
+                <outlet property="mi_updateInterval" destination="545" id="9Jc-EE-aal"/>
+                <outlet property="statusMenu" destination="536" id="bbZ-yM-I5R"/>
+            </connections>
+        </customObject>
         <userDefaultsController representsSharedInstance="YES" id="556"/>
+        <customObject id="420" customClass="NSFontManager"/>
     </objects>
 </document>

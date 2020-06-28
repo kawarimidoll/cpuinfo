@@ -17,7 +17,7 @@
                 <menuItem title="Start at Login" identifier="startAtLogin" id="591">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="updateStartAtLogin:" target="494" id="3BC-4U-sqH"/>
+                        <action selector="updateStartAtLoginWithSender:" target="494" id="jz7-zZ-y1j"/>
                         <binding destination="494" name="value" keyPath="startAtLogin" id="2VA-54-SIh"/>
                     </connections>
                 </menuItem>
@@ -29,43 +29,43 @@
                             <menuItem title="0.1sec" tag="100" id="547">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="0gm-fj-lo1"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="2pM-WY-MPp"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="0.2sec" tag="200" id="548">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="9t0-NQ-L6V"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="B45-O7-XHl"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="0.5sec" tag="500" id="549">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="dZP-Qe-G3A"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="aLd-Nz-TQF"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="1.0sec" tag="1000" id="550">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="D1c-5b-FyR"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="jM6-Yc-S6d"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="5sec" tag="5000" id="qsC-Hj-hOu">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="PuH-Rb-DTY"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="H8u-mN-QaE"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="10sec" tag="10000" id="fxa-mN-qti">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="CXC-SJ-l9h"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="B8e-fz-RLX"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="30sec" tag="30000" id="kcg-I6-XWH">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateUpdateInterval:" target="494" id="7b0-oR-URZ"/>
+                                    <action selector="updateUpdateIntervalWithSender:" target="494" id="3Z7-GU-yWI"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -78,7 +78,7 @@
                             <menuItem title="Image" state="on" tag="8" id="604">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateShowImage:" target="494" id="syQ-mX-s33"/>
+                                    <action selector="updateShowImageWithSender:" target="494" id="Qqw-s3-hd0"/>
                                     <binding destination="494" name="value" keyPath="showImage" id="4BH-g2-uBM"/>
                                     <binding destination="494" name="enabled" keyPath="showText" id="fHY-58-eIO"/>
                                 </connections>
@@ -86,7 +86,7 @@
                             <menuItem title="Text" id="544">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateShowText:" target="494" id="pLe-fS-G6r"/>
+                                    <action selector="updateShowTextWithSender:" target="494" id="YD8-lo-zNu"/>
                                     <binding destination="494" name="enabled" keyPath="showImage" id="qQo-mc-Xab"/>
                                     <binding destination="494" name="value" keyPath="showText" id="dPu-Qi-KRr"/>
                                 </connections>
@@ -101,13 +101,13 @@
                             <menuItem title="Default" state="on" id="nBb-5V-n6w">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateTheme:" target="494" id="XFp-X5-g6P"/>
+                                    <action selector="updateThemeWithSender:" target="494" id="TVK-c0-9KZ"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="B/W" id="FLy-3M-Lxw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="updateTheme:" target="494" id="0ue-mE-zNw"/>
+                                    <action selector="updateThemeWithSender:" target="494" id="ylw-FO-Udb"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -116,7 +116,6 @@
                 <menuItem title="Show cores indivisually" id="602">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="updateCoresIndividually:" target="494" id="brU-gf-ctp"/>
                         <binding destination="494" name="value" keyPath="showCoresIndividually" id="C89-kE-3Cd"/>
                     </connections>
                 </menuItem>
@@ -124,7 +123,7 @@
                 <menuItem title="Open Activity Monitor" id="RfE-ia-xId">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="launchActivityMonitor:" target="494" id="jNM-rb-se6"/>
+                        <action selector="launchActivityMonitorWithSender:" target="494" id="6TH-nH-sgY"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" id="539">
